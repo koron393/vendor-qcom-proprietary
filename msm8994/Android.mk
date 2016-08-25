@@ -1,0 +1,126 @@
+LOCAL_PATH := $(call my-dir)
+
+ifeq ($(filter-out kitakami, $(PRODUCT_PLATFORM)), )
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := perfd
+LOCAL_MODULE_OWNER := QCOM Proprietary
+LOCAL_SRC_FILES := vendor/bin/perfd
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_SUFFIX := 
+LOCAL_MODULE_CLASS := EXECUTABLES
+LOCAL_MULTILIB := 64
+LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/bin
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := perf-profile0_conf
+LOCAL_MODULE_OWNER := QCOM Proprietary
+LOCAL_SRC_FILES := vendor/etc/perf-profile0.conf
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_STEM := perf-profile0
+LOCAL_MODULE_SUFFIX := .conf
+LOCAL_MODULE_CLASS := ETC
+LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/etc
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := perf-profile1_conf
+LOCAL_MODULE_OWNER := QCOM Proprietary
+LOCAL_SRC_FILES := vendor/etc/perf-profile1.conf
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_STEM := perf-profile1
+LOCAL_MODULE_SUFFIX := .conf
+LOCAL_MODULE_CLASS := ETC
+LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/etc
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := perf-profile2_conf
+LOCAL_MODULE_OWNER := QCOM Proprietary
+LOCAL_SRC_FILES := vendor/etc/perf-profile2.conf
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_STEM := perf-profile2
+LOCAL_MODULE_SUFFIX := .conf
+LOCAL_MODULE_CLASS := ETC
+LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/etc
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := perf-profile3_conf
+LOCAL_MODULE_OWNER := QCOM Proprietary
+LOCAL_SRC_FILES := vendor/etc/perf-profile3.conf
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_STEM := perf-profile3
+LOCAL_MODULE_SUFFIX := .conf
+LOCAL_MODULE_CLASS := ETC
+LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/etc
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := perf-profile4_conf
+LOCAL_MODULE_OWNER := QCOM Proprietary
+LOCAL_SRC_FILES := vendor/etc/perf-profile4.conf
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_STEM := perf-profile4
+LOCAL_MODULE_SUFFIX := .conf
+LOCAL_MODULE_CLASS := ETC
+LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/etc
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := perf-profile5_conf
+LOCAL_MODULE_OWNER := QCOM Proprietary
+LOCAL_SRC_FILES := vendor/etc/perf-profile5.conf
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_STEM := perf-profile5
+LOCAL_MODULE_SUFFIX := .conf
+LOCAL_MODULE_CLASS := ETC
+LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/etc
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := libqti-perfd-client
+LOCAL_MODULE_OWNER := QCOM Proprietary
+LOCAL_SRC_FILES := vendor/lib/libqti-perfd-client.so
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_SUFFIX := .so
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MULTILIB := 32
+LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/lib
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := libthermalclient
+LOCAL_MODULE_OWNER := QCOM Proprietary
+LOCAL_SRC_FILES := vendor/lib/libthermalclient.so
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_SUFFIX := .so
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MULTILIB := 32
+LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/lib
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := libqti-perfd-client
+LOCAL_MODULE_OWNER := QCOM Proprietary
+LOCAL_SRC_FILES := vendor/lib64/libqti-perfd-client.so
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_SUFFIX := .so
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MULTILIB := 64
+LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/lib64
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := libthermalclient
+LOCAL_MODULE_OWNER := QCOM Proprietary
+LOCAL_SRC_FILES := vendor/lib64/libthermalclient.so
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_SUFFIX := .so
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MULTILIB := 64
+LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/lib64
+include $(BUILD_PREBUILT)
+
+endif
