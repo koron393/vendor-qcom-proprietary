@@ -1,6 +1,6 @@
 LOCAL_PATH := $(call my-dir)
 
-ifeq ($(filter-out kitakami, $(PRODUCT_PLATFORM)), )
+ifeq ($(filter-out shinano, $(PRODUCT_PLATFORM)), )
 
 include $(CLEAR_VARS)
 LOCAL_MODULE := perfd
@@ -9,7 +9,6 @@ LOCAL_SRC_FILES := vendor/bin/perfd
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_SUFFIX := 
 LOCAL_MODULE_CLASS := EXECUTABLES
-LOCAL_MULTILIB := 64
 LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/bin
 include $(BUILD_PREBUILT)
 
@@ -99,28 +98,6 @@ LOCAL_MODULE_SUFFIX := .so
 LOCAL_MODULE_CLASS := SHARED_LIBRARIES
 LOCAL_MULTILIB := 32
 LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/lib
-include $(BUILD_PREBUILT)
-
-include $(CLEAR_VARS)
-LOCAL_MODULE := libqti-perfd-client
-LOCAL_MODULE_OWNER := QCOM Proprietary
-LOCAL_SRC_FILES := vendor/lib64/libqti-perfd-client.so
-LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_SUFFIX := .so
-LOCAL_MODULE_CLASS := SHARED_LIBRARIES
-LOCAL_MULTILIB := 64
-LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/lib64
-include $(BUILD_PREBUILT)
-
-include $(CLEAR_VARS)
-LOCAL_MODULE := libthermalclient
-LOCAL_MODULE_OWNER := QCOM Proprietary
-LOCAL_SRC_FILES := vendor/lib64/libthermalclient.so
-LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_SUFFIX := .so
-LOCAL_MODULE_CLASS := SHARED_LIBRARIES
-LOCAL_MULTILIB := 64
-LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/lib64
 include $(BUILD_PREBUILT)
 
 endif
