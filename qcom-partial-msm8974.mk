@@ -8,3 +8,4 @@ PRODUCT_PACKAGES += \
     perf-profile5 \
     libqti-perfd-client \
     libthermalclient \
+    hvdcp
