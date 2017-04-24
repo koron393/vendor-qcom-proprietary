@@ -1,6 +1,7 @@
 LOCAL_PATH := $(call my-dir)
 
-ifeq ($(filter-out shinano, $(PRODUCT_PLATFORM)), )
+ifeq ($(BOARD_VENDOR),sony)
+ifneq ($(filter shinano, $(PRODUCT_PLATFORM)),)
 
 include $(CLEAR_VARS)
 LOCAL_MODULE := perfd
@@ -110,4 +111,5 @@ LOCAL_MODULE_CLASS := EXECUTABLES
 LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/bin
 include $(BUILD_PREBUILT)
 
+endif
 endif
